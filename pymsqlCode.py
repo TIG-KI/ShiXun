@@ -1,5 +1,4 @@
 import pymysql
-import logging
 
 con = pymysql.connect(
 
@@ -64,6 +63,7 @@ def batchInsertFun():
         print(e)
         print("出现问题需要回滚")
     else:
+        print("插入数据成功")
         con.commit()
 
 def closeFun():
@@ -75,5 +75,5 @@ def closeFun():
     pass
 
 #selFun()
-batchInsertFun()
+#batchInsertFun()
 
